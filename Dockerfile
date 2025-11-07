@@ -1,4 +1,8 @@
 FROM python:3.9-slim
-COPY app.py/app.py
-CMD ["python","/app.py"]
+
+# Copy app.py from your current directory into the container root
+COPY app.py /app.py
+
+# Run the app
+CMD ["python", "/app.py"]
 
